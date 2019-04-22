@@ -1,5 +1,5 @@
 /**
- ** Создание персонажа
+ * Создание персонажа
  *
  * @param {string} name - Имя персонажа
  * @param {string} type - Тип персонажа
@@ -14,8 +14,7 @@ function Character(name, type) {
   this.defence = 40;
 }
 
-function damage(points) {
-  if (!points) points = 0;
+function damage(points = 0) {
   const harm = points * (1 - this.defence / 100);
   if (this.health > harm) {
     this.health = this.health - harm;
